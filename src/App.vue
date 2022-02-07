@@ -1,27 +1,60 @@
 <template>
    <div id="app">
-      <div class="header"></div>
+      <Header />
    </div>
 </template>
 
 <script>
-import header from '@/components/header.vue'
+import Header from './components/header.vue'
 
 export default {
    name: 'App',
    components: {
-      header,
+      Header,
    }
 }
+
 </script>
 
 <style>
+
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme:wght@700&family=DM+Sans:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
+}
+
+ul,
+ol {
+   list-style: none;
+}
+
+body {
+   min-height: 100vh;
+   scroll-behavior: smooth;
+   text-rendering: optimizeSpeed;
+   margin: 0;
+   line-height: 1.5;
+}
+
 #app {
-   font-family: Avenir, Helvetica, Arial, sans-serif;
+   font-family: 'BioRhyme',serif, 'DM Sans', sans-serif ;
    -webkit-font-smoothing: antialiased;
    -moz-osx-font-smoothing: grayscale;
-   text-align: center;
    color: #2c3e50;
-   margin-top: 60px;
 }
+
+.container {
+   margin: 0 auto;
+   padding: 0 15px;
+   max-width: 1200px;
+}
+
+
+
+
 </style>
