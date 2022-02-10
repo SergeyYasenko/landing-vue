@@ -3,10 +3,9 @@
     <div class="header__row">
       <div class="header__menu">
         <i
-          @click="toggleClass(0)"
+          @click="toggleClass"
           :class="{
-            option_box: true,
-            open: isOpen(0),
+            open: isOpen,
             'material-icons': true,
             menu: true,
           }"
@@ -14,16 +13,14 @@
         >
         <nav
           :class="{
-            option_box: true,
-            open: isOpen(0),
+            open: isOpen,
             'header__burger-menu': true,
           }"
         >
           <i
-            @click="toggleClass(0)"
+            @click="toggleClass"
             :class="{
-              option_box: true,
-              open: isOpen(0),
+              open: isOpen,
               'material-icons': true,
               close: true,
             }"
@@ -164,16 +161,13 @@ export default {
         { title: "Work With Us", path: "#" },
         { title: "Logout", path: "#" },
       ],
-      openData: [{ isOpen: false }, { isOpen: false }, { isOpen: false }],
+      isOpen: false,
       close: false,
     };
   },
   methods: {
-    toggleClass(i) {
-      this.openData[i].isOpen = !this.openData[i].isOpen;
-    },
-    isOpen(i) {
-      return this.openData[i].isOpen;
+    toggleClass() {
+      this.isOpen = !this.isOpen;
     },
   },
 };
