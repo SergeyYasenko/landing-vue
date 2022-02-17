@@ -1,17 +1,20 @@
 <template>
-  <div id="app">
-    <Header />
-  </div>
+   <div id="app">
+      <Header />
+      <Main />
+   </div>
 </template>
 
 <script>
 import Header from "./components/header.vue";
+import Main from "./components/first-block.vue";
 
 export default {
-  name: "App",
-  components: {
-    Header,
-  },
+   name: "App",
+   components: {
+      Header,
+      Main,
+   },
 };
 </script>
 
@@ -21,36 +24,36 @@ export default {
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+   box-sizing: border-box;
+   padding: 0;
+   margin: 0;
 }
 
 ul,
 ol {
-  list-style: none;
+   list-style: none;
 }
 
 body {
-  min-height: 100vh;
-  scroll-behavior: smooth;
-  text-rendering: optimizeSpeed;
-  margin: 0;
-  line-height: 1.5;
+   min-height: 100vh;
+   scroll-behavior: smooth;
+   text-rendering: optimizeSpeed;
+   margin: 0;
+   line-height: 1.5;
 }
 
 #app {
-  font-family: "BioRhyme", serif, "DM Sans", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #333;
-  background-color: #f7f2e2;
+   font-family: "BioRhyme", serif, "DM Sans", sans-serif;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   color: #333;
+   background-color: #f7f2e2;
 }
 
 .container {
-  margin: 0 auto;
-  padding-right: 15px;
-  padding-left: 15px;
-  max-width: 1200px;
+   margin: 0 auto;
+   padding-right: 15px;
+   padding-left: 15px;
+   max-width: 1200px;
 }
 </style>
